@@ -1,0 +1,108 @@
+@media only screen and (max-width: 1024px) {
+
+	.div_form {
+		margin-top: 10px;
+		width: 40%;
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	.campo {
+		margin-top: 10px;
+		margin-right: 20px;
+		padding: 10px;
+		outline: none;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 916px) {
+	ul {
+		margin-left: 10px;
+	}
+
+	#formulario fieldset {
+		margin-right: 100px;
+	}
+}
+
+@media only screen and (max-width: 665px) {
+	#formulario fieldset {
+		width: 60%;
+		margin-right: 30px;
+	}
+}
+
+@media only screen and (max-width: 570px) {
+	body {
+		font-size: 90%;
+	}
+
+	header div {
+		padding-left: 50px;
+	}
+
+	#box {
+		position: relative;
+		top: -40px;
+		left: 0;
+	}
+
+	#box h2 {
+		padding-left: 10px;
+	}
+
+	ul li {
+		padding: 20px 10px;
+	}
+}
+
+@media only screen and (max-width: 390px) {
+	body {
+		height: 100%;
+	}
+
+	header {
+		height: 120px;
+	}
+
+	header div {
+		padding-left: 40px;
+		padding-top: 30px;
+	}
+
+	header h1 {
+		display: block;
+	}
+
+	ul {
+		display: inline;
+		margin: 0;
+	}
+
+	ul li {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	#box {
+		position: static;
+		height: 100%;
+	}
+
+	#formulario fieldset {
+		width: 100%;
+		position: static;
+		float: none;
+		margin: 10px 0 0 0;
+	}
+
+	.botao {
+		position: static;
+		margin-top: 5px;
+		float: right;
+	}
+}
+
+/*~~~~~~~~~~ Página Sucesso ~~~~~~~~~~*/
+

@@ -52,3 +52,9 @@ function processaEtapa3() {
 		alert("Digite dados válidos.")
 	}
 }
+
+function enviarForm(){
+	document.getElementById("formulario").method = "post";
+	document.getElementById("formulario").action = "sucesso.html";
+	document.getElementById("formulario").submit();
+}
