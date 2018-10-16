@@ -54,7 +54,31 @@ function processaEtapa3() {
 }
 
 function enviarForm(){
+	window.sessionStorage.setItem('nome', nome);
+	window.sessionStorage.setItem('email', email);
+	window.sessionStorage.setItem('rg', rg);
+	window.sessionStorage.setItem('cpf', cpf);
+	window.sessionStorage.setItem('cidade', cidade);
+	window.sessionStorage.setItem('cep', cep);
+	window.sessionStorage.setItem('telefone', telefone);
+	window.sessionStorage.setItem('celular', celular);
+	window.sessionStorage.setItem('linkedin', linkedin);
+	window.sessionStorage.setItem('github', github);
 	document.getElementById("formulario").method = "post";
 	document.getElementById("formulario").action = "sucesso.html";
 	document.getElementById("formulario").submit();
+}
+
+function exibirDados() {
+	var nome = window.sessionStorage.getItem('nome');
+	var email = window.sessionStorage.getItem('email');
+	var rg = window.sessionStorage.getItem('rg');
+	var cpf = window.sessionStorage.getItem('cpf');
+	var cidade = window.sessionStorage.getItem('cidade');
+	var cep = window.sessionStorage.getItem('cep');
+	var telefone = window.sessionStorage.getItem('telefone');
+	var celular = window.sessionStorage.getItem('celular');
+	var linkedin = window.sessionStorage.getItem('linkedin');
+	var github = window.sessionStorage.getItem('github');
+	console.log(nome, email, rg, cpf, cidade, cep, telefone, celular, linkedin, github);
 }
