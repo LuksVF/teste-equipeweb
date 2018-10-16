@@ -1,0 +1,157 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+}
+
+header {
+	height: 155px;
+	background-color: #303030;
+	width: 100%;
+}
+
+header div {
+	padding-left: 93px;
+	padding-top: 60px;
+}
+
+header h1 {
+	color: white;
+	font-size: 30px;
+	font-weight: normal;
+	display: inline;
+}
+
+header p {
+	color: #9a9a9a;
+	display: inline;
+}
+
+main {
+	background-color: #cdcdcd;
+	width: 100%;
+	height: auto;
+}
+
+footer{
+	height: 60px;
+	background-color: #303030;
+	width: 100%;
+}
+
+#box {
+	background-color: #fff;
+	width: 80%;
+	height: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: -40px;
+	left: 20px;
+}
+
+#box h2 {
+	font-size: 20px;
+	font-weight: normal;
+	color: #4b4b4b;
+	padding-top: 22px;
+	padding-left: 30px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+ul {
+	list-style-type: none;
+	width: 25%;
+	margin-left: 30px;
+	display: inline-block;
+	padding: 0;
+}
+
+ul li {
+	background-color: #303030;
+	margin-top: 10px;
+	padding: 20px;
+	text-align: center;
+	color: #fff;
+}
+
+ul li.ativo {
+	background-color: #e12229;
+}
+
+#formulario fieldset {
+	width: 50%;
+	height: 220px;
+	float: right;
+	margin-top: 50px;
+	margin-right: 150px;
+	position: relative;
+	top: 6px;
+}
+
+#formulario fieldset:not(:first-of-type){
+	display: none;
+}
+
+#formulario fieldset p {
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+#formulario fieldset#etapa4 p {
+	padding-top: 15px;
+	font-size: 14px;
+}
+
+#formulario fieldset label {
+	display: block;
+}
+
+#formulario fieldset input.acao {
+	padding: 10px;
+	position: absolute;
+	float: right;
+}
+
+#formulario fieldset#etapa1 input {
+	margin-top: 10px;
+	margin-right: 20px;
+	padding: 10px;
+	outline: none;
+}
+
+#formulario fieldset#etapa2 input:not(.acao), fieldset#etapa3 input:not(.acao) {
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	outline: none;
+}
+
+.div_form {
+	margin-top: 10px;
+	width: 40%;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.acao {
+	padding: 5px 30px;
+	background-color: #e12229;
+	border: none;
+	font-size: 20px;
+	color: #fff;
+	position: relative;
+	top: 220px;
+	right: -20px;
+}
+
+#etapa2 .acao, #etapa3 .acao, #etapa4 .acao {
+	position: relative;
+	top: 230px;
+	right: 0px;
+}

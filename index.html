@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<title>Formulário Passo-a-Passo</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	</head>
+
+	<body>
+		<header>
+			<div>
+				<h1>Formulário passo-a-passo</h1>
+				<p>teste equipe web</p>
+			</div>
+		</header>
+
+		<main>
+			<div id="box">
+				<h2>DADOS</h2>
+				<form id="formulario">
+					<ul>
+						<li class="ativo">Dados</li>
+						<li>Documentos</li>
+						<li>Contatos</li>
+						<li>Confirmação</li>
+					</ul>
+
+					<fieldset id="etapa1">
+						<p>Bem vindo ao teste front-end da Equipe Web da Fatec Rubens Lara.</p>
+						<p>Antes de começar, por favor cadastre-se em nosso sistema.</p>
+						<div class="div_form">
+							<p>
+								<label>Nome:</label>
+								<input type="text" name="nome" placeholder="Nome">
+							</p>
+						</div>
+						<div class="div_form">
+							<p>
+								<label>Email:</label>
+								<input type="email" name="email" placeholder="Email">
+							</p>
+						</div>
+						<input type="button" name="next" class="next acao" value="Próximo"></input>
+					</fieldset>
+
+					<fieldset id="etapa2">
+						<div class="div_form">
+							<p>
+								<label for="rg">RG:</label>
+								<input type="number" name="rg" placeholder="RG">
+							</p>
+							<p>
+								<label for="cidade">Cidade:</label>
+								<input type="text" name="cidade" placeholder="Cidade">
+							</p>
+						</div>
+						<div class="div_form">
+							<p>
+								<label for="cpf">CPF:</label>
+								<input type="number" name="cpf" placeholder="CPF">
+							</p>
+							<p>
+								<label for="cep">CEP:</label>
+								<input type="number" name="cep" placeholder="CEP">
+							</p>
+						</div>
+						<input type="button" name="next" class="next acao" value="Próximo"></input>
+					</fieldset>
+
+					<fieldset id="etapa3">
+						<div class="div_form">
+							<p>
+								<label for="telefone">Telefone:</label>
+								<input type="tel" name="telefone" placeholder="Telefone">
+							</p>
+							<p>
+								<label for="linkedin">LinkedIn:</label>
+								<input type="url" name="linkedin" placeholder="LinkedIn">
+							</p>
+						</div>
+						<div class="div_form">
+							<p>
+								<label for="celular">Celular:</label>
+								<input type="tel" name="celular" placeholder="Celular">
+							</p>
+							<p>
+								<label for="github">Github:</label>
+								<input type="url" name="github" placeholder="Github">
+							</p>
+						</div>
+						<input type="button" name="next" class="next acao" value="Próximo"></input>
+					</fieldset>
+
+					<fieldset id="etapa4">
+						<div class="div_form">
+							<p>Nome:</p>
+							<p>Email:</p>
+							<p>Telefone:</p>
+							<p>RG:</p>
+							<p>CPF:</p>
+						</div>
+						<div class="div_form">
+							<p>CEP:</p>
+							<p>Celular:</p>
+							<p>Cidade:</p>
+							<p>Github:</p>
+							<p>LinkedIn:</p>
+						</div>
+						<input type="submit" name="next" class="next acao" value="Confirmar"></input>
+					</fieldset>
+				</form>
+			</div>
+		</main>
+
+		<footer></footer>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
