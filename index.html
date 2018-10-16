@@ -2,6 +2,7 @@
 <html lang="pt-br">
 	<head>
 		<title>Formulário Passo-a-Passo</title>
+		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	</head>
@@ -19,10 +20,10 @@
 				<h2>DADOS</h2>
 				<form id="formulario">
 					<ul>
-						<li class="ativo">Dados</li>
-						<li>Documentos</li>
-						<li>Contatos</li>
-						<li>Confirmação</li>
+						<li id="passo1" class="ativo">Dados</li>
+						<li id="passo2">Documentos</li>
+						<li id="passo3">Contatos</li>
+						<li id="passo4">Confirmação</li>
 					</ul>
 
 					<fieldset id="etapa1">
@@ -31,89 +32,89 @@
 						<div class="div_form">
 							<p>
 								<label>Nome:</label>
-								<input type="text" name="nome" placeholder="Nome">
+								<input type="text" id="nome" name="nome" class="campo" maxlength="40" placeholder="Nome" required>
 							</p>
 						</div>
 						<div class="div_form">
 							<p>
 								<label>Email:</label>
-								<input type="email" name="email" placeholder="Email">
+								<input type="email" id="email" name="email" class="campo" placeholder="Email" required>
 							</p>
 						</div>
-						<input type="button" name="next" class="next acao" value="Próximo"></input>
+						<button type="button" class="botao" onclick="processaEtapa1()">Próximo</button>
 					</fieldset>
 
 					<fieldset id="etapa2">
 						<div class="div_form">
 							<p>
 								<label for="rg">RG:</label>
-								<input type="number" name="rg" placeholder="RG">
+								<input type="text" id="rg" name="rg" class="campo" pattern="[0-9]" placeholder="RG" required>
 							</p>
 							<p>
 								<label for="cidade">Cidade:</label>
-								<input type="text" name="cidade" placeholder="Cidade">
+								<input type="text" id="cidade" name="cidade" class="campo" placeholder="Cidade" required>
 							</p>
 						</div>
 						<div class="div_form">
 							<p>
 								<label for="cpf">CPF:</label>
-								<input type="number" name="cpf" placeholder="CPF">
+								<input type="text" id="cpf" name="cpf" class="campo" placeholder="CPF" required>
 							</p>
 							<p>
 								<label for="cep">CEP:</label>
-								<input type="number" name="cep" placeholder="CEP">
+								<input type="text" id="cep" name="cep" class="campo" pattern="[0-9]{5}-[0-9]{3}" placeholder="CEP" required>
 							</p>
 						</div>
-						<input type="button" name="next" class="next acao" value="Próximo"></input>
+						<button type="button" class="botao" onclick="processaEtapa2()">Próximo</button>
 					</fieldset>
 
 					<fieldset id="etapa3">
 						<div class="div_form">
 							<p>
 								<label for="telefone">Telefone:</label>
-								<input type="tel" name="telefone" placeholder="Telefone">
+								<input type="tel" id="telefone" name="telefone" class="campo" maxlength="20" placeholder="Telefone" required>
 							</p>
 							<p>
 								<label for="linkedin">LinkedIn:</label>
-								<input type="url" name="linkedin" placeholder="LinkedIn">
+								<input type="url" id="linkedin" name="linkedin" class="campo" placeholder="LinkedIn" required>
 							</p>
 						</div>
 						<div class="div_form">
 							<p>
 								<label for="celular">Celular:</label>
-								<input type="tel" name="celular" placeholder="Celular">
+								<input type="tel" id="celular" name="celular" class="campo" placeholder="Celular" required>
 							</p>
 							<p>
 								<label for="github">Github:</label>
-								<input type="url" name="github" placeholder="Github">
+								<input type="url" id="github" name="github" class="campo" placeholder="Github" required>
 							</p>
 						</div>
-						<input type="button" name="next" class="next acao" value="Próximo"></input>
+						<button type="button" class="botao"  onclick="processaEtapa3()">Próximo</button>
 					</fieldset>
 
 					<fieldset id="etapa4">
 						<div class="div_form">
-							<p>Nome:</p>
-							<p>Email:</p>
-							<p>Telefone:</p>
-							<p>RG:</p>
-							<p>CPF:</p>
+							<p>Nome:</p> <span id="mostraNome"></span><br>
+							<p>Email:</p> <span id="mostraEmail"></span><br>
+							<p>Telefone:</p> <span id="mostraTelefone"></span><br>
+							<p>RG:</p> <span id="mostraRG"></span><br>
+							<p>CPF:</p> <span id="mostraCPF"></span><br>
 						</div>
 						<div class="div_form">
-							<p>CEP:</p>
-							<p>Celular:</p>
-							<p>Cidade:</p>
-							<p>Github:</p>
-							<p>LinkedIn:</p>
+							<p>CEP:</p> <span id="mostraCEP"></span><br>
+							<p>Celular:</p> <span id="mostraCelular"></span><br>
+							<p>Cidade:</p> <span id="mostraCidade"></span><br>
+							<p>Github:</p> <span id="mostraGithub"></span><br>
+							<p>LinkedIn:</p> <span id="mostraLinkedin"></span>
 						</div>
-						<input type="submit" name="next" class="next acao" value="Confirmar"></input>
+						<button type="button" class="botao">Confirmar</button>
 					</fieldset>
 				</form>
 			</div>
 		</main>
 
 		<footer></footer>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
 		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>

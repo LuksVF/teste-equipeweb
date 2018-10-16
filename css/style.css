@@ -84,6 +84,10 @@ ul li.ativo {
 	background-color: #e12229;
 }
 
+input.invalido {
+	background-color: #ffdddd;
+}
+
 #formulario fieldset {
 	width: 50%;
 	height: 220px;
@@ -94,42 +98,42 @@ ul li.ativo {
 	top: 6px;
 }
 
-#formulario fieldset:not(:first-of-type){
-	display: none;
-}
-
 #formulario fieldset p {
 	padding-top: 10px;
 	font-size: 14px;
 }
 
+#formulario fieldset span {
+	font-size: 14px;
+	border-bottom: 1px solid grey;
+}
+
 #formulario fieldset#etapa4 p {
 	padding-top: 15px;
 	font-size: 14px;
+	display: inline-block;
 }
 
 #formulario fieldset label {
 	display: block;
 }
 
-#formulario fieldset input.acao {
-	padding: 10px;
-	position: absolute;
-	float: right;
-}
-
-#formulario fieldset#etapa1 input {
+/*#formulario fieldset#etapa1 input*/ .campo {
 	margin-top: 10px;
 	margin-right: 20px;
 	padding: 10px;
 	outline: none;
 }
 
-#formulario fieldset#etapa2 input:not(.acao), fieldset#etapa3 input:not(.acao) {
+/*#formulario fieldset#etapa2 input:not(.acao), fieldset#etapa3 input:not(.acao) {
 	padding: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	outline: none;
+}*/
+
+#etapa2, #etapa3, #etapa4 {
+	display: none;
 }
 
 .div_form {
@@ -139,19 +143,13 @@ ul li.ativo {
 	margin-left: 20px;
 }
 
-.acao {
-	padding: 5px 30px;
+.botao {
+	padding: 10px;
 	background-color: #e12229;
 	border: none;
 	font-size: 20px;
 	color: #fff;
-	position: relative;
-	top: 220px;
-	right: -20px;
-}
-
-#etapa2 .acao, #etapa3 .acao, #etapa4 .acao {
-	position: relative;
-	top: 230px;
-	right: 0px;
+	position: absolute;
+	top: 225px;
+	right: -2px;
 }
